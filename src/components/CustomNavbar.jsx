@@ -11,10 +11,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 // internal imports
+import { useTheme } from '../contexts/ThemeContext';
 // import "./style.css";
 import logo from "../assets/images/logo.webp";
 
 const CustomNavbar = () => {
+  const { theme, toggleTheme } = useTheme();
+
   return (
     <>
       <Navbar expand="lg" className="bg-body-tertiary">
