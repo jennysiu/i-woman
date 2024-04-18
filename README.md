@@ -79,3 +79,6 @@ Evaluation Criteria:
 
 # Notes
 Font family - "Dancing Script" free from google fonts - closest free lookalike I could find
+
+acknowledgemen
+colour splash image - unsplash - Pawel Czerwinski

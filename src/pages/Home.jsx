@@ -1,52 +1,86 @@
-import { useTheme } from "../contexts/ThemeContext";
+// Bootstrap
+import Button from "react-bootstrap/Button";
+
+// Font Awesome Icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faPeopleGroup,
+  faHandshakeSimple,
+  faListCheck,
+} from "@fortawesome/free-solid-svg-icons";
 
 // internal imports
+import { useTheme } from "../contexts/ThemeContext";
 
 const Home = () => {
   const { theme } = useTheme();
 
   return (
     <>
-      <div className={theme === "dark" ? "dark-theme" : ""}>
-        <header>
-          <h1>i-woman</h1>
+      <div>
+        {/* HEADER */}
+        <header className="header">
+          <h3 className="header-h3">Make Your Mark</h3>
+          <h1> I-WOMAN</h1>
           <p>
             The woman's business hub creates an inclusive culture to
             successfully harness entrepreneur's potential to truly transform
             society.
           </p>
-          <button>Join Us</button>
+          <Button variant="primary">Join Us</Button>{" "}
         </header>
-        <section>
-          <div>
-            <h3>Unite</h3>
-            <p>
-              Aliqua magna aute officia duis proident enim quis culpa qui quis
-              amet ea.
-            </p>
-            <button>Join Us</button>
+
+        {/* GOALS SECTION */}
+        <section className="goals-section">
+          <div className="goals">
+            <div className="goal">
+              <FontAwesomeIcon
+                icon={faPeopleGroup}
+                size="3x"
+                className="goal-icon"
+              />
+              <h3>Unite</h3>
+              <p>
+                Aliqua magna aute officia duis proident enim quis culpa qui quis
+                amet ea.
+              </p>
+              {/* <Button variant="primary">Join Us</Button>{" "} */}
+            </div>
+            <div className="goal">
+              <FontAwesomeIcon
+                icon={faHandshakeSimple}
+                size="3x"
+                className="goal-icon"
+              />
+              <h3>Network</h3>
+              <p>
+                Aliqua magna aute officia duis proident enim quis culpa qui quis
+                amet ea.
+              </p>
+              {/* <Button variant="primary">Join Us</Button>{" "} */}
+            </div>
+            <div className="goal">
+              <FontAwesomeIcon
+                icon={faListCheck}
+                size="3x"
+                className="goal-icon"
+              />
+              <h3>Progress</h3>
+              <p>
+                Aliqua magna aute officia duis proident enim quis culpa qui quis
+                amet ea.
+              </p>
+              {/* <Button variant="primary">Join Us</Button>{" "} */}
+            </div>
           </div>
-          <div>
-            <h3>Network</h3>
-            <p>
-              Aliqua magna aute officia duis proident enim quis culpa qui quis
-              amet ea.
-            </p>
-            <button>Join Us</button>
-          </div>
-          <div>
-            <h3>Progress</h3>
-            <p>
-              Aliqua magna aute officia duis proident enim quis culpa qui quis
-              amet ea.
-            </p>
-            <button>Join Us</button>
-          </div>
+          <Button variant="primary">Find Out More</Button>{" "}
         </section>
+
+        {/* JOIN OUR GROUPS SECTION */}
         <section>
           <h2>Join Our Groups</h2>
           <p>Explore our groups to see what you can learn and contribute.</p>
-          <button>Explore Groups</button>
+          <Button variant="primary">Explore Groups</Button>{" "}
         </section>
       </div>
     </>
