@@ -1,0 +1,31 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+/* font polishing */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* COLOUR */
+  /* color-scheme: light dark; */
+
+  /* colour scheme */
+  --white: #ffffff; 
+  --dark-grey: #333333;      
+  --main-pink: #E46054;
+  --dark-pink: #5D0000;
+  --light-pink: #F4AAA1;
+
+  /* Default light theme colors using variables */
+  background-color: var(--white); 
+  color: var(--dark-grey); 
+}
+
+/* Dark theme modifications */
+.dark-theme {
+  background-color: var(--dark-grey); 
+  color: var(--white); 
+}
