@@ -75,3 +75,10 @@ Evaluation Criteria:
 - Code Quality: Is the code clean, readable, and maintainable?
 
 - Bonus (for JavaScript): Are the interactive features implemented smoothly and enhance the user experience?
+
+
+# Notes
+Font family - "Dancing Script" free from google fonts - closest free lookalike I could find
+
+acknowledgemen
+colour splash image - unsplash - Pawel Czerwinski
