@@ -10,11 +10,7 @@
   -moz-osx-font-smoothing: grayscale;
 
   /* COLOUR */
-  color-scheme: light dark;
-
-  /* light colour theme */
-  color: var(--dark-grey);
-  background-color: var(--white);
+  /* color-scheme: light dark; */
 
   /* colour scheme */
   --white: #ffffff; 
@@ -22,10 +18,14 @@
   --main-pink: #E46054;
   --dark-pink: #5D0000;
   --light-pink: #F4AAA1;
+
+  /* Default light theme colors using variables */
+  background-color: var(--white); 
+  color: var(--dark-grey); 
 }
 
-/* dark colour theme */
+/* Dark theme modifications */
 .dark-theme {
-  --background-color: var(--dark-grey); 
-  --text-color: var(--white); 
+  background-color: var(--dark-grey); 
+  color: var(--white); 
 }
