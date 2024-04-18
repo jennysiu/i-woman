@@ -51,6 +51,11 @@ h3 {
 }
 
 
+header {
+  padding: 4em;
+  background-image: url(/src//assets/images/colour-splash.jpg);
+}
+
 section {
   padding: 3em;
 }
@@ -61,10 +66,6 @@ button {
 
 /* HOME PAGE */
 
-.header {
-  padding: 4em;
-  background-image: url(/src//assets/images/colour-splash.jpg);
-}
 
 .goals {
   display: flex;
@@ -76,4 +77,24 @@ button {
 
 .goal-icon {
   margin: 0.2em;
+}
+
+/* GROUPS PAGE */
+
+.groups-page {
+  display: flex;
+}
+
+.post-btn {
+  margin: 0;
+}
+
+.share-options {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.share-options a {
+  margin-right: 2em;
 }

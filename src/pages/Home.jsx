@@ -19,7 +19,7 @@ const Home = () => {
     <>
       <div>
         {/* HEADER */}
-        <header className="header">
+        <header>
           <h3 className="header-h3">Make Your Mark</h3>
           <h1> I-WOMAN</h1>
           <p>
