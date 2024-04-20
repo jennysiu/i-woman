@@ -1,0 +1,42 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 0.8em;
+
+  background-color: var(--main-pink);
+}
+
+.copyright-text {
+  margin: 0;
+  padding: 0;
+  color: var(--white);
+}
+
+.footer-links {
+  margin: 0;
+  padding: 0;
+}
+
+.social-link {
+margin: 0.3em;
+font-size: 1.8em;
+color: var(--white);
+transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.social-link:hover {
+  color: var(--dark-pink);
+  /* Scale up on hover */
+  transform: scale(1.5) !important; 
+}
+
+.social-icon {
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+}
+
+.social-icon:hover {
+  transform: scale(1.2) !important; 
+
+}
