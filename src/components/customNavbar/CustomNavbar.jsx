@@ -12,8 +12,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 // internal imports
-import { useTheme } from "../contexts/ThemeContext";
-// import "./style.css";
+import { useTheme } from "../../contexts/ThemeContext";
+import "./customNavbar.css";
 import logo from "/assets/images/logo.webp";
 
 const CustomNavbar = () => {
@@ -21,12 +21,12 @@ const CustomNavbar = () => {
 
   return (
     <>
-      <Navbar expand="lg" className="bg-body-tertiary">
+      <Navbar expand="lg" className="bg-body-tertiary navbar">
         <Container>
           <div className="flex-spacer">
             <Navbar.Brand className="brand-name" as={Link} to="/">
               {/* replace with logo here */}
-              <img src={logo} alt="Logo image of i-woman"></img>
+              <img src={logo} className="logo-img" alt="Logo image of i-woman"></img>
             </Navbar.Brand>
           </div>
 
@@ -61,6 +61,7 @@ const CustomNavbar = () => {
                 </NavDropdown>
                 {/* toggle button for light/dark theme */}
                 <BootstrapSwitchButton
+                className="toggle-theme-btn"
                   size="sm"
                   checked={theme === "light"}
                   onlabel="Light"

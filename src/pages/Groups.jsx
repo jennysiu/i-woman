@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // bootstrap
-import { Form, Button, FormControl } from 'react-bootstrap';
+import { Form, Button, FormControl } from "react-bootstrap";
 
 // Font Awesome Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,7 +9,7 @@ import {
   faThumbsUp,
   faComment,
   faPaperPlane,
-  faMagnifyingGlass
+  faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 
 // INTERNAL IMPORTS
@@ -30,10 +30,14 @@ const Groups = () => {
     setInputCommentValue(event.target.value); // Update state with input value
   };
 
-  // handles search groups 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  // handles search groups
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert('Search term submitted: ' + searchTerm);
+    alert("Search term submitted: " + searchTerm);
   };
 
   return (
@@ -142,9 +146,13 @@ const Groups = () => {
               <section id="my-groups-section">
                 <div className="my-groups">
                   <div className="search-group-outline">
-                    <Form inline onSubmit={handleSubmit} className="search-group">
-                      <Button type="submit" variant="outline-success" className="group-search-btn">
-                      <FontAwesomeIcon icon={faMagnifyingGlass} />
+                    <Form onSubmit={handleSubmit} className="search-group">
+                      <Button
+                        type="submit"
+                        variant="outline-success"
+                        className="group-search-btn"
+                      >
+                        <FontAwesomeIcon icon={faMagnifyingGlass} />
                       </Button>
                       <FormControl
                         type="text"

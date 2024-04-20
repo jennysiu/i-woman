@@ -1,0 +1,48 @@
+.navbar {
+  padding: 0 !important;
+  background-color: var(--main-pink) !important;
+}
+
+.logo-img {
+  width: 60%;
+}
+
+.nav-link {
+  color: var(--white);
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out, 
+  transform 0.3s ease-in-out 
+}
+
+.nav-link:hover {
+  transform: scale(1.1); /* Scale up on hover */
+}
+
+.switch {
+  border: transparent !important;
+}
+
+.switch-on {
+  background-color: var(--light-pink) !important;
+  border: transparent !important;
+}
+
+.switch-on:hover {
+  background-color: var(--dark-pink) !important;
+
+}
+
+.switch-off {
+  background-color: var(--dark-grey) !important;
+  border: transparent !important;
+  color: var(--white);
+}
+
+.switch-off:hover {
+  background-color: var(--dark-pink) !important;
+  color: white !important;
+}
+
+.switch-handle:hover {
+ background-color: var(--light-background);
+}
