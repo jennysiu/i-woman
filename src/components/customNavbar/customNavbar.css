@@ -10,3 +10,32 @@
 .nav-link {
   color: var(--white);
 }
+
+.switch {
+  border: transparent !important;
+}
+
+.switch-on {
+  background-color: var(--light-pink) !important;
+  border: transparent !important;
+}
+
+.switch-on:hover {
+  background-color: var(--dark-pink) !important;
+
+}
+
+.switch-off {
+  background-color: var(--dark-grey) !important;
+  border: transparent !important;
+  color: var(--white);
+}
+
+.switch-off:hover {
+  background-color: var(--dark-pink) !important;
+  color: white !important;
+}
+
+.switch-handle:hover {
+ background-color: var(--light-background);
+}

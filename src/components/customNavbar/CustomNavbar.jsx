@@ -61,6 +61,7 @@ const CustomNavbar = () => {
                 </NavDropdown>
                 {/* toggle button for light/dark theme */}
                 <BootstrapSwitchButton
+                className="toggle-theme-btn"
                   size="sm"
                   checked={theme === "light"}
                   onlabel="Light"
