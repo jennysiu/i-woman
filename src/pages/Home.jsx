@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 // Bootstrap
 import Button from "react-bootstrap/Button";
 
@@ -15,6 +17,16 @@ import { useTheme } from "../contexts/ThemeContext";
 const Home = () => {
   const { theme } = useTheme();
 
+  const navigate = useNavigate();
+
+  const exploreGroupsNavigation = () => {
+    navigate("/groups");
+  };
+
+  const findOutMoreNavigation = () => {
+    navigate("/about");
+  };
+
   return (
     <>
       <div>
@@ -29,6 +41,8 @@ const Home = () => {
           </p>
           <Button variant="primary">Join Us</Button>{" "}
         </header>
+
+        <hr />
 
         {/* GOALS SECTION */}
         <section className="goals-section">
@@ -70,17 +84,23 @@ const Home = () => {
                 Aliqua magna aute officia duis proident enim quis culpa qui quis
                 amet ea.
               </p>
-              {/* <Button variant="primary">Join Us</Button>{" "} */}
             </div>
           </div>
-          <Button variant="primary">Find Out More</Button>{" "}
+
+          <Button variant="primary" onClick={findOutMoreNavigation}>
+            Find Out More
+          </Button>
         </section>
+
+        <hr />
 
         {/* JOIN OUR GROUPS SECTION */}
         <section>
           <h2>Join Our Groups</h2>
           <p>Explore our groups to see what you can learn and contribute.</p>
-          <Button variant="primary">Explore Groups</Button>{" "}
+          <Button variant="primary" onClick={exploreGroupsNavigation}>
+            Explore Groups
+          </Button>{" "}
         </section>
       </div>
     </>

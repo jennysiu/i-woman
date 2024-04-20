@@ -14,15 +14,15 @@
 
   /* colour scheme */
   --white: #ffffff; 
+  --light-background: #f5f0f0;
   --dark-grey: #333333;   
   --light-grey: #D0D7DE;   
   --main-pink: #E46054;
   --dark-pink: #5D0000;
   --light-pink: #F4AAA1;
 
-  /* Default light theme colors using variables */
-  background-color: var(--white); 
-  color: var(--dark-grey); 
+  /* test colours */
+  /* --back: #f5f0f0; */
 }
 
 /* Dark theme modifications */
@@ -31,9 +31,16 @@
   color: var(--white); 
 }
 
+/* Default light theme colors using variables */
+body {
+  background-color: var(--light-background);
+}
+
 h1 {
-font-family: "Dancing Script";
+margin: 0.2em;
+  font-family: "Dancing Script";
 font-size: 4em;
+
 }
 
 h2 {
@@ -44,7 +51,6 @@ h3 {
   margin: 1em;
   margin-top: 0;
   font-size: 1.5em;
-  text-align: left;
 }
 
 
@@ -55,6 +61,7 @@ h4 {
 
 header {
   padding: 4em;
+  padding-bottom: 2.5em;
   background-image: url(/src//assets/images/colour-splash.jpg);
 }
 
@@ -64,17 +71,35 @@ p {
 }
 
 section {
-  padding: 3em;
+  padding: 2.5em;
 }
 
 button {
-  margin: 1em;
+  margin: 2em;
+  background-color: var(--light-background) !important;
+  border: solid 1px var(--main-pink) !important;
+  color: var(--dark-grey) !important;
+  transition: background-color 0.3s ease-in-out, 
+  transform 0.3s ease-in-out !important; 
+
+}
+
+button:hover {
+  background-color: var(--main-pink) !important;
+  color: var(--white) !important;
+}
+
+hr {
+  width: 80%;
+  margin: 20px auto ;
+  
 }
 
 /* HOME PAGE */
-
 .header-h3 {
+  margin: 0.2em;
   font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
 }
 
 .goals {
