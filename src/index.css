@@ -98,7 +98,9 @@ button {
 
 /* share something section */
 .share-something {
-  /* background-color: var(--light-pink); */
+  padding: 1em;
+  border: solid 1px var(--light-grey);
+  border-radius: 0.5em;
 }
 
 .post-btn {
@@ -107,11 +109,12 @@ button {
 
 .share-options {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: flex-start;
 }
 
 .share-options a {
+
   margin-right: 2em;
 }
 
@@ -159,6 +162,34 @@ button {
 
 
 /* my groups section */
+.search-group {
+  padding: 0.3em 0;
+  display: flex;
+}
+
+
+.search-group-outline {
+  padding: 0 0.5em;
+  margin-bottom: 1.5em;
+  border: solid 1px var(--light-grey);
+  border-radius: 0.5em;
+}
+
+.group-search-btn {
+  margin: 0 1em;
+  border: transparent !important;
+}
+
+.group-search-input {
+  border: transparent !important;
+}
+
+.my-groups {
+  padding: 0.5em;
+  border: solid 1px var(--light-grey);
+  border-radius: 0.5em;
+}
+
 .my-group {
   padding: 0.3em;
 }
@@ -173,3 +204,4 @@ button {
 .group-info {
   text-align: left;
 }
+

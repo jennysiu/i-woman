@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 
 // bootstrap
-import { Form } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
+import { Form, Button, FormControl } from 'react-bootstrap';
 
 // Font Awesome Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,6 +9,7 @@ import {
   faThumbsUp,
   faComment,
   faPaperPlane,
+  faMagnifyingGlass
 } from "@fortawesome/free-solid-svg-icons";
 
 // INTERNAL IMPORTS
@@ -17,11 +17,25 @@ import myGroups from "../data/myGroups.json";
 import feedData from "../data/feedData.json";
 
 const Groups = () => {
-  const [inputValue, setInputValue] = useState(""); // State to keep track of input
+  const [inputShareValue, setInputShareValue] = useState(""); // State to keep track of share something text
+  const [inputCommentValue, setInputCommentValue] = useState(""); // State to keep track of comment input text
 
-  const handleInputChange = (event) => {
-    setInputValue(event.target.value); // Update state with input value
+  // set state for share text box when text updated
+  const handleShareInputChange = (event) => {
+    setInputShareValue(event.target.value); // Update state with input value
   };
+
+  // set state for comment text box when text updated
+  const handleCommentInputChange = (event) => {
+    setInputCommentValue(event.target.value); // Update state with input value
+  };
+
+  // handles search groups 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert('Search term submitted: ' + searchTerm);
+  };
+
   return (
     <>
       <div>
@@ -36,31 +50,33 @@ const Groups = () => {
         <div className="container-fluid">
           <div className="row">
             <div className="col-8">
-              <section className="share-something">
-                <div className="row">
-                  <div className="col-10">
-                    <Form>
-                      <Form.Group className="mb-3" controlId="text">
-                        <Form.Control
-                          type="text"
-                          placeholder="Share something..."
-                          value={inputValue}
-                          onChange={handleInputChange}
-                        />
-                      </Form.Group>
-                    </Form>
+              <section className="share-something-section">
+                <div className="share-something">
+                  <div className="row">
+                    <div className="col-10">
+                      <Form>
+                        <Form.Group className="mb-3" controlId="text">
+                          <Form.Control
+                            type="text"
+                            placeholder="Share something..."
+                            value={inputShareValue}
+                            onChange={handleShareInputChange}
+                          />
+                        </Form.Group>
+                      </Form>
+                    </div>
+                    <div className="col-2">
+                      <Button variant="primary" className="post-btn">
+                        Post
+                      </Button>{" "}
+                    </div>
                   </div>
-                  <div className="col-2">
-                    <Button variant="primary" className="post-btn">
-                      Post
-                    </Button>{" "}
-                  </div>
-                </div>
 
-                <div className="share-options">
-                  <a>Photo</a>
-                  <a>Video</a>
-                  <a>GIF</a>
+                  <div className="share-options">
+                    <a>Photo</a>
+                    <a>Video</a>
+                    <a>GIF</a>
+                  </div>
                 </div>
               </section>
 
@@ -105,12 +121,12 @@ const Groups = () => {
 
                         <div className="row">
                           <Form className="comment-input">
-                            <Form.Group className="mb-3" controlId="text">
+                            <Form.Group className="mb-3" controlId="comment">
                               <Form.Control
                                 type="text"
                                 placeholder="Write a comment..."
-                                value={inputValue}
-                                onChange={handleInputChange}
+                                value={inputCommentValue}
+                                onChange={handleCommentInputChange}
                               />
                             </Form.Group>
                           </Form>
@@ -123,24 +139,40 @@ const Groups = () => {
             </div>
 
             <div className="col-4">
-              <section>
-                <h3>My Groups</h3>
-                {/* dynamically render my groups here */}
-                {myGroups.map((group, index) => (
-                  <React.Fragment key={index}>
-                    <div className="container-fluid">
-                      <div className="row my-group">
-                        <div className="col-4">
-                          <img src={group.image} className="groups-img"></img>
-                        </div>
-                        <div className="col-8 group-info">
-                          <h4>{group.name}</h4>
-                          <p>Members: {group.members}</p>
+              <section id="my-groups-section">
+                <div className="my-groups">
+                  <div className="search-group-outline">
+                    <Form inline onSubmit={handleSubmit} className="search-group">
+                      <Button type="submit" variant="outline-success" className="group-search-btn">
+                      <FontAwesomeIcon icon={faMagnifyingGlass} />
+                      </Button>
+                      <FormControl
+                        type="text"
+                        placeholder="Search"
+                        className="mr-sm-2 group-search-input"
+                        // value={searchTerm}
+                        // onChange={handleInputChange}
+                      />
+                    </Form>
+                  </div>
+                  <h3>My Groups</h3>
+                  {/* dynamically render my groups here */}
+                  {myGroups.map((group, index) => (
+                    <React.Fragment key={index}>
+                      <div className="container-fluid">
+                        <div className="row my-group">
+                          <div className="col-4">
+                            <img src={group.image} className="groups-img"></img>
+                          </div>
+                          <div className="col-8 group-info">
+                            <h4>{group.name}</h4>
+                            <p>Members: {group.members}</p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </React.Fragment>
-                ))}
+                    </React.Fragment>
+                  ))}
+                </div>
               </section>
             </div>
           </div>
