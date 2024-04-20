@@ -51,6 +51,7 @@ const Groups = () => {
             society.
           </p>
         </header>
+        
         <div className="container-fluid">
           <div className="row">
             <div className="col-8">

@@ -115,6 +115,18 @@ hr {
   margin: 0.2em;
 }
 
+/* ABOUT PAGE */
+.about-us-para {
+  padding: 0 4em;
+text-align: center;
+}
+
+.about-img {
+width: 30%;
+margin: 2em;
+}
+
+
 /* GROUPS PAGE */
 .groups-page {
   display: flex;
