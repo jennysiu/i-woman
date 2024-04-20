@@ -9,6 +9,13 @@
 
 .nav-link {
   color: var(--white);
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out, 
+  transform 0.3s ease-in-out 
+}
+
+.nav-link:hover {
+  transform: scale(1.1); /* Scale up on hover */
 }
 
 .switch {
