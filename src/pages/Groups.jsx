@@ -4,6 +4,18 @@ import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 
+// Font Awesome Icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faThumbsUp,
+  faComment,
+  faPaperPlane,
+} from "@fortawesome/free-solid-svg-icons";
+
+// INTERNAL IMPORTS
+import myGroups from "../data/myGroups.json";
+import feedData from "../data/feedData.json";
+
 const Groups = () => {
   const [inputValue, setInputValue] = useState(""); // State to keep track of input
 
@@ -39,10 +51,7 @@ const Groups = () => {
                     </Form>
                   </div>
                   <div className="col-2">
-                    <Button
-                      variant="primary"
-                      className="post-btn"
-                    >
+                    <Button variant="primary" className="post-btn">
                       Post
                     </Button>{" "}
                   </div>
@@ -56,8 +65,59 @@ const Groups = () => {
               </section>
 
               <div>
-                <section className="feed">
                 {/* dynamically render feed here*/}
+                <section className="feed-section">
+                  {/* dynamically render my groups here */}
+                  {feedData.map((feed, index) => (
+                    <React.Fragment key={index}>
+                      <div className="container-fluid feed">
+                        <div className="row feed-header">
+                          <div className="col-1">
+                            <h5 className="initials">{feed.initials}</h5>
+                          </div>
+                          <div className="col-8 feed-info">
+                            <p>{feed.name}</p>
+                            <p className="date-posted">
+                              {feed["date-posted"]} Posted on: {feed.group}
+                            </p>
+                          </div>
+                          <div>{/* share and more icons */}</div>
+                        </div>
+
+                        <div className="row">
+                          <p className="feed-message">{feed.message}</p>
+                        </div>
+
+                        <div className="row">
+                          <div className="react-icons">
+                            {/* react icons */}
+                            <a>
+                              <FontAwesomeIcon icon={faThumbsUp} /> Like
+                            </a>
+                            <a>
+                              <FontAwesomeIcon icon={faComment} /> Comment
+                            </a>
+                            <a>
+                              <FontAwesomeIcon icon={faPaperPlane} /> Send
+                            </a>
+                          </div>
+                        </div>
+
+                        <div className="row">
+                          <Form className="comment-input">
+                            <Form.Group className="mb-3" controlId="text">
+                              <Form.Control
+                                type="text"
+                                placeholder="Write a comment..."
+                                value={inputValue}
+                                onChange={handleInputChange}
+                              />
+                            </Form.Group>
+                          </Form>
+                        </div>
+                      </div>
+                    </React.Fragment>
+                  ))}
                 </section>
               </div>
             </div>
@@ -66,6 +126,21 @@ const Groups = () => {
               <section>
                 <h3>My Groups</h3>
                 {/* dynamically render my groups here */}
+                {myGroups.map((group, index) => (
+                  <React.Fragment key={index}>
+                    <div className="container-fluid">
+                      <div className="row my-group">
+                        <div className="col-4">
+                          <img src={group.image} className="groups-img"></img>
+                        </div>
+                        <div className="col-8 group-info">
+                          <h4>{group.name}</h4>
+                          <p>Members: {group.members}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </React.Fragment>
+                ))}
               </section>
             </div>
           </div>
