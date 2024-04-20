@@ -15,8 +15,8 @@ import JobBoard from "./pages/JobBoard";
 import Profile from "./pages/Profile";
 
 // components
-import CustomNavbar from "./components/CustomNavbar";
-import CustomFooter from "./components/CustomFooter";
+import CustomNavbar from "./components/customNavbar/CustomNavbar";
+import CustomFooter from "./components/customeFooter/CustomFooter";
 
 function App() {
   const { theme } = useTheme();

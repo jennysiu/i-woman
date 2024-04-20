@@ -1,0 +1,12 @@
+.navbar {
+  padding: 0 !important;
+  background-color: var(--main-pink) !important;
+}
+
+.logo-img {
+  width: 60%;
+}
+
+.nav-link {
+  color: var(--white);
+}
