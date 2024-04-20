@@ -15,7 +15,9 @@
 }
 
 .nav-link:hover {
-  transform: scale(1.1); /* Scale up on hover */
+  color: var(--white);
+  /* Scale up on hover */
+  transform: scale(1.1); 
 }
 
 .switch {
