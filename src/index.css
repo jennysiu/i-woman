@@ -14,8 +14,10 @@
 
   /* colour scheme */
   --white: #ffffff; 
+  --white-trans: #ffffffad;
   --light-background: #f5f0f0;
-  --light-background-trasn: #f5f0f0d6;
+  --light-background-trans: #f5f0f0f4;
+  --dark-grey-trans:#333333e8;
   --dark-grey: #333333;   
   --light-grey: #D0D7DE;   
   --main-pink: #E46054;
@@ -60,6 +62,12 @@ h4 {
  font-size: 1em;
 }
 
+@media (prefers-color-scheme: dark) {
+  .dark-theme h1 {
+    color: var(--light-pink);  
+  }
+}
+
 
 header {
   padding: 4em;
@@ -82,7 +90,13 @@ button {
   color: var(--dark-grey) !important;
   transition: background-color 0.3s ease-in-out, 
   transform 0.3s ease-in-out !important; 
+}
 
+@media (prefers-color-scheme: dark) {
+  .dark-theme button {
+    background-color: var(--dark-grey-trans) !important;  
+    color: var(--white) !important;
+  }
 }
 
 button:hover {
@@ -101,10 +115,18 @@ hr {
   background-image: url(../public/assets/images/network-threads-img.jpg);
 }
 
+
 .header-contents {
   padding: 1em;
-  background-color: var(--light-background-trasn);
+  background-color: var(--light-background-trans);
   border-radius: 2em;
+}
+
+@media (prefers-color-scheme: dark) {
+  .dark-theme .header-contents {
+    background-color: var(--dark-grey-trans);  
+    color: var(--white);  
+  }
 }
 
 .header-h3 {
@@ -151,6 +173,13 @@ margin: 2em;
   padding: 1em;
   border: solid 1px var(--light-grey);
   border-radius: 0.5em;
+}
+
+@media (prefers-color-scheme: dark) {
+  .dark-theme .form-control {
+    background-color: var(--white-trans) !important;  
+
+  }
 }
 
 .post-btn {
@@ -217,7 +246,6 @@ margin: 2em;
   display: flex;
 }
 
-
 .search-group-outline {
   padding: 0 0.5em;
   margin-bottom: 1.5em;
@@ -230,6 +258,10 @@ margin: 2em;
   border: transparent !important;
 }
 
+.group-search-btn:hover {
+  background-color: transparent !important;
+}
+
 .group-search-input {
   border: transparent !important;
 }
@@ -240,18 +272,23 @@ margin: 2em;
   border-radius: 0.5em;
 }
 
+.my-groups-h3 {
+  text-align: left;
+}
+
 .my-group {
   padding: 0.3em;
 }
 
 .groups-img {
-  margin: 0 0.5em;
+  margin: 0;
   width: 100%;
-  /* height: 100%; */
   object-fit: cover;
 }
 
 .group-info {
+  margin: 0;
+  padding: 0;
   text-align: left;
 }
 

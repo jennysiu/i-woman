@@ -60,7 +60,7 @@ const Groups = () => {
                   <div className="row">
                     <div className="col-10">
                       <Form>
-                        <Form.Group className="mb-3" controlId="text">
+                        <Form.Group className="mb-3 text-input" controlId="text">
                           <Form.Control
                             type="text"
                             placeholder="Share something..."
@@ -164,7 +164,7 @@ const Groups = () => {
                       />
                     </Form>
                   </div>
-                  <h3>My Groups</h3>
+                  <h3 className="my-groups-h3">My Groups</h3>
                   {/* dynamically render my groups here */}
                   {myGroups.map((group, index) => (
                     <React.Fragment key={index}>
@@ -178,6 +178,7 @@ const Groups = () => {
                             <p>Members: {group.members}</p>
                           </div>
                         </div>
+                        <hr></hr>
                       </div>
                     </React.Fragment>
                   ))}

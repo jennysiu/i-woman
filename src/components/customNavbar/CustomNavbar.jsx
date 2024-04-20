@@ -9,7 +9,7 @@ import BootstrapSwitchButton from "bootstrap-switch-button-react";
 
 // font awesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser,faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 
 // internal imports
 import { useTheme } from "../../contexts/ThemeContext";
@@ -26,7 +26,11 @@ const CustomNavbar = () => {
           <div className="flex-spacer">
             <Navbar.Brand className="brand-name" as={Link} to="/">
               {/* replace with logo here */}
-              <img src={logo} className="logo-img" alt="Logo image of i-woman"></img>
+              <img
+                src={logo}
+                className="logo-img"
+                alt="Logo image of i-woman"
+              ></img>
             </Navbar.Brand>
           </div>
 
@@ -34,13 +38,31 @@ const CustomNavbar = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto links-container">
-                <Nav.Link as={Link} to="/">
+                <Nav.Link
+                  as={Link}
+                  to="/"
+                  className={({ isActive }) =>
+                    "nav-link" + (isActive ? " active" : "")
+                  }
+                >
                   Home
                 </Nav.Link>
-                <Nav.Link as={Link} to="/about">
+                <Nav.Link
+                  as={Link}
+                  to="/about"
+                  className={({ isActive }) =>
+                    "nav-link" + (isActive ? " active" : "")
+                  }
+                >
                   About
                 </Nav.Link>
-                <Nav.Link as={Link} to="groups">
+                <Nav.Link
+                  as={Link}
+                  to="groups"
+                  className={({ isActive }) =>
+                    "nav-link" + (isActive ? " active" : "")
+                  }
+                >
                   Groups
                 </Nav.Link>
 
@@ -61,11 +83,21 @@ const CustomNavbar = () => {
                 </NavDropdown>
                 {/* toggle button for light/dark theme */}
                 <BootstrapSwitchButton
-                className="toggle-theme-btn"
+                  className="toggle-theme-btn"
                   size="sm"
                   checked={theme === "light"}
-                  onlabel={<FontAwesomeIcon icon={faSun} style={{ fontSize: '27px' }}/>}
-                  offlabel={<FontAwesomeIcon icon={faMoon} style={{ fontSize: '27px' }}/>}
+                  onlabel={
+                    <FontAwesomeIcon
+                      icon={faSun}
+                      style={{ fontSize: "27px" }}
+                    />
+                  }
+                  offlabel={
+                    <FontAwesomeIcon
+                      icon={faMoon}
+                      style={{ fontSize: "27px" }}
+                    />
+                  }
                   onChange={() => {
                     toggleTheme();
                   }}
