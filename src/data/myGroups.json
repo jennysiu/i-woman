@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Women's Leadership",
+    "image": "/assets/images/notepad.jpg",
+    "members": "5" 
+  },
+  {
+    "id": 2,
+    "name": "Women in Tech",
+    "image": "/assets/images/notepad.jpg",
+    "members": "9" 
+  },
+  {
+    "id": 3,
+    "name": "Work-Life Balance",
+    "image": "/assets/images/notepad.jpg",
+    "members": "7" 
+  },
+  {
+    "id": 4,
+    "name": "Ask Me Anything",
+    "image": "/assets/images/notepad.jpg",
+    "members": "15" 
+  }
+]

@@ -82,3 +82,4 @@ Font family - "Dancing Script" free from google fonts - closest free lookalike I
 
 acknowledgemen
 colour splash image - unsplash - Pawel Czerwinski
+notepad img - unsplash - Markus Spiske
