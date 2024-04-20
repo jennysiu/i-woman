@@ -9,7 +9,7 @@ import BootstrapSwitchButton from "bootstrap-switch-button-react";
 
 // font awesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faUser,faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 
 // internal imports
 import { useTheme } from "../../contexts/ThemeContext";
@@ -64,8 +64,8 @@ const CustomNavbar = () => {
                 className="toggle-theme-btn"
                   size="sm"
                   checked={theme === "light"}
-                  onlabel="Light"
-                  offlabel="Dark"
+                  onlabel={<FontAwesomeIcon icon={faSun} style={{ fontSize: '27px' }}/>}
+                  offlabel={<FontAwesomeIcon icon={faMoon} style={{ fontSize: '27px' }}/>}
                   onChange={() => {
                     toggleTheme();
                   }}

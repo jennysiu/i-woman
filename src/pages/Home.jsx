@@ -13,6 +13,7 @@ import {
 
 // internal imports
 import { useTheme } from "../contexts/ThemeContext";
+import networkThreadsImg from "../../public/assets/images/network-threads-img.jpg";
 
 const Home = () => {
   const { theme } = useTheme();
@@ -31,15 +32,18 @@ const Home = () => {
     <>
       <div>
         {/* HEADER */}
-        <header>
-          <h3 className="header-h3">Make Your Mark</h3>
-          <h1> I-WOMAN</h1>
-          <p>
-            The woman's business hub creates an inclusive culture to
-            successfully harness entrepreneur's potential to truly transform
-            society.
-          </p>
-          <Button variant="primary">Join Us</Button>{" "}
+        <header className="home-header">
+          <div className="header-contents">
+            <h3 className="header-h3">Make Your Mark</h3>
+            <h1> I-WOMAN</h1>
+            <p>
+              The woman's business hub creates an inclusive culture to
+              successfully harness entrepreneur's potential to truly transform
+              society.
+            </p>
+            {/* <img src={networkThreadsImg} className="header-img" ></img> */}
+            <Button variant="primary">Join Us</Button>{" "}
+          </div>
         </header>
 
         <hr />

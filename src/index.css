@@ -15,6 +15,7 @@
   /* colour scheme */
   --white: #ffffff; 
   --light-background: #f5f0f0;
+  --light-background-trasn: #f5f0f0d6;
   --dark-grey: #333333;   
   --light-grey: #D0D7DE;   
   --main-pink: #E46054;
@@ -37,9 +38,10 @@ body {
 }
 
 h1 {
-margin: 0.2em;
+  margin: 0.2em;
   font-family: "Dancing Script";
-font-size: 4em;
+  font-size: 4em;
+  font-weight: bolder;
 
 }
 
@@ -62,7 +64,6 @@ h4 {
 header {
   padding: 4em;
   padding-bottom: 2.5em;
-  background-image: url(/src//assets/images/colour-splash.jpg);
 }
 
 p {
@@ -96,11 +97,25 @@ hr {
 }
 
 /* HOME PAGE */
+.home-header {
+  background-image: url(../public/assets/images/network-threads-img.jpg);
+}
+
+.header-contents {
+  padding: 1em;
+  background-color: var(--light-background-trasn);
+  border-radius: 2em;
+}
+
 .header-h3 {
   margin: 0.2em;
   font-family: Helvetica, Arial, sans-serif;
   text-align: center;
 }
+
+/* .header-img {
+  width: 40%;
+} */
 
 .goals {
   display: flex;
@@ -113,6 +128,18 @@ hr {
 .goal-icon {
   margin: 0.2em;
 }
+
+/* ABOUT PAGE */
+.about-us-para {
+  padding: 0 4em;
+text-align: center;
+}
+
+.about-img {
+width: 30%;
+margin: 2em;
+}
+
 
 /* GROUPS PAGE */
 .groups-page {

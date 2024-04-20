@@ -48,3 +48,8 @@
 .switch-handle:hover {
  background-color: var(--light-background);
 }
+
+.toggle-theme-btn .theme-icon {
+  font-size: 2em;
+  background-color: aqua;
+}
