@@ -364,7 +364,5 @@ margin: 2em;
 }
 
 @media (min-width: 1200px) {
-  .container {
-    width: 70%;
-  }
+
 }
