@@ -53,3 +53,25 @@
   font-size: 2em;
   background-color: aqua;
 }
+
+@media (max-width: 600px) {
+  .container {
+    padding-bottom: 1em;
+    margin: 0;
+  }
+
+  .navbar {
+    display: flex !important;
+justify-content: flex-end !important;
+  }
+
+  .navbar-toggler  {
+    margin: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding-bottom: 1em;
+  }
+}
