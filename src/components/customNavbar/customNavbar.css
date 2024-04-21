@@ -53,3 +53,13 @@
   font-size: 2em;
   background-color: aqua;
 }
+
+@media (max-width: 600px) {
+  .container {
+    padding-bottom: 1em;
+  }
+
+  .switch-group .switch, .switch-on, .switch-off {
+    height: 3em;
+  }
+}

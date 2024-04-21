@@ -296,6 +296,7 @@ margin: 2em;
 
 /* RESPONSIVENESS */
 
+/* small screens */
 @media (max-width: 600px) {
   
   header {
@@ -310,9 +311,14 @@ margin: 2em;
   .home-header {
     padding: 2em;
   }
+
   .goals {
     display: flex;
     flex-direction: column;
+  }
+
+  .goal {
+    margin: 1em 0;
   }
   
   /* about page */
@@ -336,6 +342,7 @@ margin: 2em;
 
 }
 
+/* medium screens */
 @media (min-width: 900px) {
   .container {
     width: 75%;
