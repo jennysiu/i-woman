@@ -343,10 +343,24 @@ margin: 2em;
 }
 
 /* medium screens */
-@media (min-width: 900px) {
+@media (max-width: 900px) {
+  section {
+    padding: 1em;
+  }
+
+  /* group page */
   .container {
     width: 75%;
   }
+
+  .feed {
+    padding: 0.1em;
+  }
+  .feed-header {
+    display: flex;
+    flex-direction: column;
+  }
+
 }
 
 @media (min-width: 1200px) {

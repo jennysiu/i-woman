@@ -54,7 +54,7 @@ const Groups = () => {
 
         <div className="container-fluid">
           <div className="row">
-            <div className="col-12 col-md-8 col-lg-8 col-xl-8">
+            <div className="col-12 col-md-12 col-lg-8 col-xl-8">
               <section className="share-something-section">
                 <div className="share-something">
                   <div className="row">
@@ -145,7 +145,7 @@ const Groups = () => {
               </div>
             </div>
 
-            <div className="col-12 col-md-4 col-lg-4 col-xl-4">
+            <div className="col-12 col-md-12 col-lg-4 col-xl-4">
               <section id="my-groups-section">
                 <div className="my-groups">
                   <div className="search-group-outline">

@@ -58,8 +58,10 @@
   .container {
     padding-bottom: 1em;
   }
+}
 
-  .switch-group .switch, .switch-on, .switch-off {
-    height: 3em;
+@media (max-width: 900px) {
+  .container {
+    padding-bottom: 1em;
   }
 }
