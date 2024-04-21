@@ -51,16 +51,19 @@ const Groups = () => {
             society.
           </p>
         </header>
-        
+
         <div className="container-fluid">
           <div className="row">
-            <div className="col-8">
+            <div className="col-12 col-md-8 col-lg-8 col-xl-8">
               <section className="share-something-section">
                 <div className="share-something">
                   <div className="row">
-                    <div className="col-10">
+                    <div className="col-9 col-md-10 col-lg-10 col-xl-10">
                       <Form>
-                        <Form.Group className="mb-3 text-input" controlId="text">
+                        <Form.Group
+                          className="mb-3 text-input"
+                          controlId="text"
+                        >
                           <Form.Control
                             type="text"
                             placeholder="Share something..."
@@ -70,7 +73,7 @@ const Groups = () => {
                         </Form.Group>
                       </Form>
                     </div>
-                    <div className="col-2">
+                    <div className="col-1 col-md-2 col-lg-2 col-xl-2">
                       <Button variant="primary" className="post-btn">
                         Post
                       </Button>{" "}
@@ -96,13 +99,12 @@ const Groups = () => {
                           <div className="col-1">
                             <h5 className="initials">{feed.initials}</h5>
                           </div>
-                          <div className="col-8 feed-info">
+                          <div className="col-10 feed-info">
                             <p>{feed.name}</p>
                             <p className="date-posted">
                               {feed["date-posted"]} Posted on: {feed.group}
                             </p>
                           </div>
-                          <div>{/* share and more icons */}</div>
                         </div>
 
                         <div className="row">
@@ -143,7 +145,7 @@ const Groups = () => {
               </div>
             </div>
 
-            <div className="col-4">
+            <div className="col-12 col-md-4 col-lg-4 col-xl-4">
               <section id="my-groups-section">
                 <div className="my-groups">
                   <div className="search-group-outline">

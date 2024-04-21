@@ -42,7 +42,7 @@ body {
 h1 {
   margin: 0.2em;
   font-family: "Dancing Script";
-  font-size: 4em;
+  font-size: 3.8em;
   font-weight: bolder;
 
 }
@@ -112,7 +112,7 @@ hr {
 
 /* HOME PAGE */
 .home-header {
-  background-image: url(../public/assets/images/network-threads-img.jpg);
+  background-image: url(../public/assets/images/colour-splash.jpg);
 }
 
 
@@ -225,7 +225,8 @@ margin: 2em;
 }
 
 .feed-message {
-  margin-bottom: 1em;
+  margin: 0 1em;
+  margin-bottom: 0.5em;
   text-align: left;
 }
 
@@ -236,6 +237,7 @@ margin: 2em;
 }
 
 .comment-input {
+  padding: 0 1em;
   margin-top: 1em;
 }
 
@@ -292,3 +294,56 @@ margin: 2em;
   text-align: left;
 }
 
+/* RESPONSIVENESS */
+
+@media (max-width: 600px) {
+  
+  header {
+    padding: 2em;
+  }
+
+  section {
+    padding: 0.5em;
+  }
+  
+  /* home page */
+  .home-header {
+    padding: 2em;
+  }
+  .goals {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* about page */
+  .about-us-para {
+    padding: 0 2em;
+  }
+  .about-img {
+    width: 75%;
+  }
+
+  /* groups page */
+
+  .feed {
+    padding: 0.1em;
+  }
+  .feed-header {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+}
+
+@media (min-width: 900px) {
+  .container {
+    width: 75%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 70%;
+  }
+}
